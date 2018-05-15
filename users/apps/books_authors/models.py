@@ -1,0 +1,81 @@
+from django.db import models
+
+# Create your models here.
+class Book(models.Model):
+      name = models.CharField(max_length=255)
+      desc = models.TextField()
+      created_at = models.DateTimeField(auto_now_add = True)
+      updated_at = models.DateTimeField(auto_now = True)
+class Author(models.Model):
+      first_name = models.CharField(max_length=255)
+      last_name = models.CharField(max_length=255)
+      email = models.CharField(max_length=255)
+      created_at = models.DateTimeField(auto_now_add = True)
+      updated_at = models.DateTimeField(auto_now = True)
+      books = models.ManyToManyField(Book, related_name='authors')
+
+# Book.objects.create(name= "Java", desc="book")
+# Book.objects.create(name= "Python", desc="book")
+# Book.objects.create(name= "PHP", desc="book")
+# Book.objects.create(name= "Ruby", desc="book")
+# Book.objects.create(name= "C Sharp", desc="book")
+# Author.objects.create(first_name= "Mike", last_name = "Mike", email = "mail@mail.com")
+# Author.objects.create(first_name= "Speros", last_name = "Mike", email = "mail@mail.com")
+# Author.objects.create(first_name= "John", last_name = "Mike", email = "mail@mail.com")
+# Author.objects.create(first_name= "Jadee", last_name = "Mike", email = "mail@mail.com")
+# Author.objects.create(first_name= "Jay", last_name = "Mike", email = "mail@mail.com")
+# a = Book.objects.get(id=5)
+# a.name = "C#"
+# a.save()
+# a = Author.objects.get(id=5)
+# a.name = "Ketul"
+# a.save()
+
+# this_book = Book.objects.get(id=1)
+# this_author = Author.objects.get(id=1)
+# this_author.books.add(this_book)
+# this_book = Book.objects.get(id=2)
+# this_author.books.add(this_book)
+
+# this_book = Book.objects.get(id=1)
+# this_author = Author.objects.get(id=2)
+# this_author.books.add(this_book)
+# this_book = Book.objects.get(id=2)
+# this_author.books.add(this_book)
+# this_book = Book.objects.get(id=3)
+# this_author.books.add(this_book)
+
+# this_book = Book.objects.get(id=1)
+# this_author = Author.objects.get(id=3)
+# this_author.books.add(this_book)
+# this_book = Book.objects.get(id=2)
+# this_author.books.add(this_book)
+# this_book = Book.objects.get(id=3)
+# this_author.books.add(this_book)
+# this_book = Book.objects.get(id=4)
+# this_author.books.add(this_book)
+
+# this_book = Book.objects.get(id=1)
+# this_author = Author.objects.get(id=4)
+# this_author.books.add(this_book)
+# this_book = Book.objects.get(id=2)
+# this_author.books.add(this_book)
+# this_book = Book.objects.get(id=3)
+# this_author.books.add(this_book)
+# this_book = Book.objects.get(id=4)
+# this_author.books.add(this_book)
+# this_book = Book.objects.get(id=4)
+# this_author.books.add(this_book)
+
+# this_book = Book.objects.get(id=3)
+# this_book.authors.all()
+# this_book.authors.first().delete()
+
+# this_book = Book.objects.get(id=2)
+# this_author = Author.objects.get(id=5)
+# this_author.books.add(this_book)
+
+# this_book = Book.objects.get(id=3)
+# this_book.authors.all()
+# this_book = Book.objects.get(id=2)
+# this_book.authors.all()
