@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Login - Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'register/css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'register/css/style.css' %}">
+</head>
+<body>
+  <h1>Login and Registration</h1>
+  <div id="wrapper">
+    <div id="reg">
+      <h2>Register</h2>
+      <form action="/register" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" class="form-control" name="email" value="{{request.session.email}}">
+        </div>
+        <div class="form-group">
+          <label for="first_name">First Name:</label>
+          <input type="text" class="form-control" name="first_name" value="{{request.session.name1}}">
+        </div>
+        <div class="form-group">
+          <label for="last_name">Last Name:</label>
+          <input type="text" class="form-control" name="last_name" value="{{request.session.name2}}">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" name="password">
+        </div>
+        <div class="form-group">
+          <label for="passcom">Confirm Password:</label>
+          <input type="password" class="form-control" name="passcom">
+        </div>
+        <button type="submit" class="btn btn-default">Register</button>
+      </form>
+    </div>
+    <div id="log">
+      <h2>Login</h2>
+      <form action="/login" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" class="form-control" name="email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" name="password">
+        </div>
+        <button type="submit" class="btn btn-default">Login</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

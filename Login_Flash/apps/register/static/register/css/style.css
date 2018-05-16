@@ -1,0 +1,30 @@
+*{
+    margin:0 ;
+    padding: 0;
+}
+.applesauce {
+    width: 200px;
+    background-color: red;
+}
+#wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+#reg, #log {
+    width: 500px;
+    padding: 20px;
+}
+button {
+    background: linear-gradient(rgb(2, 207, 2), green);
+    box-shadow: 2px 2px 2px black;
+    color: white;
+}
+p {
+    color: red;
+}
+h1 {
+    padding: 20px;
+}
+.thanks {
+    padding: 20px;
+}
