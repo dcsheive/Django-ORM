@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Users</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'courses/css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'courses/css/style.css' %}">
+</head>
+<body>
+  <div class="userbox">
+    <h2>Create Course</h2>
+    <form action="/courses/create" method="POST" id="myform">
+    {% csrf_token %}
+    <table class="table">
+      <tr>
+          <td>Name: </td>
+          <td><input type="text" name="name"></td>
+      </tr>
+      <tr>
+          <td>Description: </td>
+          <td><textarea name="text" cols="30" rows="4"></textarea></td>
+      </tr>
+    </table>
+    </form> 
+    <div class="buttons">
+      <button type="submit" form="myform" class="btn btn-default yellowbutton" style="margin: 20px">Create</button>
+    </div>
+  </div>  
+  <div id="usertable">
+    <h1>All Courses</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name:</th>
+          <th>Description:</th>
+          <th>Date Added:</th>
+          <th>Actions:</th>
+        </tr>
+      </thead>
+      {%for i in course%}
+      <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.text}}</td>
+        <td>{{i.created_at}}</td>
+        <td>
+          <div class="buttons2">
+            <a href="/courses/delete/{{i.id}}">Delete</a>
+          </div>  
+        </td>
+      </tr>
+      {%endfor%}
+    </table>
+  </div>
+</body>
+</html>

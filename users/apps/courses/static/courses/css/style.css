@@ -1,0 +1,137 @@
+*{
+    margin:0 ;
+    padding: 0;
+}
+.applesauce {
+    width: 200px;
+    background-color: red;
+}
+#wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+#reg, #log {
+    width: 500px;
+    padding: 20px;
+}
+button {
+    background: linear-gradient(rgb(2, 207, 2), green);
+    box-shadow: 2px 2px 2px black;
+    color: white;
+    background-color: green;
+}
+li {
+    color:red;
+    list-style-type: none;
+}
+h1 {
+    padding: 20px;
+}
+.thanks {
+    padding: 20px;
+}
+h3 {
+    padding: 20px;
+}
+#top {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border-bottom: 2px solid black;
+    position: fixed;
+    width: 100vw;
+    background-color: whitesmoke;
+}
+#userdetail {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+#container{
+    padding: 10%;
+}
+.commentbox {
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-bottom: 15%;
+}
+.commentbutton{
+    background: linear-gradient(blue, darkblue);
+    float: right;
+    background-color: darkblue;
+}
+.delete {
+    background: linear-gradient(red, darkred);
+    background-color: darkred;
+    float: right;
+}
+.yellowbutton {
+    background: linear-gradient(orange, rgb(207, 114, 0));
+    background-color: rgb(226, 125, 1);
+}
+.message {
+    clear: both;
+    border: 1px solid gray;
+    padding: 5px;
+    margin-top: 5%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgb(77, 76, 76);
+    overflow: wrap;
+}
+.comment {
+    clear: both;
+    border: 1px solid darkgray;
+    padding: 5px;
+    margin-top: 2%;
+    margin-left: 5%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px gray;
+
+}
+p {
+    margin-left:10px; 
+    font-size: 20px;
+    clear: both;
+    overflow-wrap: break-word;
+}
+h4{
+    float: left;
+}
+label {
+    font-size: 18px;
+}
+.userbox {
+    width: 35%;
+    margin: 20px;
+    border: 1px solid gray;
+}
+.userbox table tbody tr {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid lightgray;
+}
+.userbox table tbody tr td {
+    border-top: 0;
+    font-size: 20px;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+#usertable {
+    width: 70%;
+    margin: auto;
+}
+#usertable table {
+    border: 1px solid gray;
+}
+#usertable h1 {
+    text-align: center;
+}
+h2{
+    margin: 10px;
+}
+.marginauto {
+    margin: auto;
+    width: 50%;
+}
