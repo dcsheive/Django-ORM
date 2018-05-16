@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>The Wall</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'user/css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'user/css/style.css' %}">
+</head>
+<body>
+    <div class="userbox">
+        <table class="table">
+            <tr>
+                <td>First Name: </td>
+                <td>{{user.first_name}}</td>
+            </tr>
+            <tr>
+                <td>Last Name: </td>
+                <td>{{user.last_name}}</td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td>{{user.email}}</td>
+            </tr>
+            <tr>
+                <td>Joined: </td>
+                <td>{{user.created_at}}</td>
+            </tr>
+        </table>
+        <div class="buttons">
+            <a href="/users/{{user.id}}/edit">
+                <button class="btn btn-default yellowbutton" style="margin: 20px">Edit Info</button>
+            </a>
+            <a href="/users/{{user.id}}/delete">
+                <button class="btn btn-default delete" style="margin: 20px">Delete Account</button>
+            </a>
+            <a href="/users">
+                <button class="btn btn-default" style="margin: 20px">Go Back</button>
+            </a>
+        </div>  
+    </div>  
+</body>
+</html>
